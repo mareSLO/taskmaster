@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>TaskMaster</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    <p>Creation: {{ task.created.strftime("%d.%m.%Y %H:%M:%S") }}</p>
+    <p>Task name: {{ task.task }}</p>
+    <p>Description: {{ task.description }}</p>
+    <p>Complete Untill: {{ task.complete_till }}</p>
+    <p>Completed: {{ task.completed }}</p>
+
+    <a href="/"><button>Home</button></a>
+    <a href="/task/{{ task.key.id() }}/edit"><button>Edit</button></a>
+    <a href="/task/{{ task.key.id() }}/complete"><button>Complete</button></a>
+    <a href="/task/{{ task.key.id() }}/delete"><button>Delete</button></a>
+
+</body>
+</html>

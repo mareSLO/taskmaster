@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>TaskMaster</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    <h1>Do you really want to finish this task?</h1>
+
+    <p>Task: {{ task.task }}</p>
+
+    <form method="post" action="/task/{{ task.key.id() }}/complete">
+        <button>Complete</button>
+    </form>
+
+    <a href="/"><button>Home</button></a>
+
+</body>
+</html>

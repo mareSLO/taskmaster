@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>TaskMaster</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    <h1>Edit task</h1>
+
+    <form method="post" action="/task/{{ task.key.id() }}/edit">
+        <p>Task name:
+        <input name="task2" value="{{ task.task }}" required></p>
+        <p>Task description:
+        <textarea name="description2" rows="7">{{ task.description }}</textarea></p>
+        <p>Complete Untill:
+        <input name="complete_till2" type="date" value="{{ task.complete_till }}"></p>
+        <button>OK</button>
+    </form>
+
+    <a href="/"><button>Home</button></a>
+
+</body>
+</html>
